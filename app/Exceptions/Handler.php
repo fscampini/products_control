@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectNpx\Exceptions;
+namespace ProductsControl\Exceptions;
 
 use Exception;
 use Illuminate\Validation\ValidationException;

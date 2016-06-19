@@ -153,10 +153,10 @@ return [
         /*
          * Application Service Providers...
          */
-        ProjectNpx\Providers\AppServiceProvider::class,
-        ProjectNpx\Providers\AuthServiceProvider::class,
-        ProjectNpx\Providers\EventServiceProvider::class,
-        ProjectNpx\Providers\RouteServiceProvider::class,
+        ProductsControl\Providers\AppServiceProvider::class,
+        ProductsControl\Providers\AuthServiceProvider::class,
+        ProductsControl\Providers\EventServiceProvider::class,
+        ProductsControl\Providers\RouteServiceProvider::class,
 
     ],
 

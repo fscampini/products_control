@@ -1,8 +1,8 @@
 <?php
 
-namespace ProjectNpx\Http\Requests;
+namespace ProductsControl\Http\Requests;
 
-use ProjectNpx\Http\Requests\Request;
+use ProductsControl\Http\Requests\Request;
 
 class DocumentRequest extends Request
 {

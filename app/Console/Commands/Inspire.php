@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectNpx\Console\Commands;
+namespace ProductsControl\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Foundation\Inspiring;

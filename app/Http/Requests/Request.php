@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectNpx\Http\Requests;
+namespace ProductsControl\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 

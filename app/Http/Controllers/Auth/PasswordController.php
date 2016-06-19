@@ -1,8 +1,8 @@
 <?php
 
-namespace ProjectNpx\Http\Controllers\Auth;
+namespace ProductsControl\Http\Controllers\Auth;
 
-use ProjectNpx\Http\Controllers\Controller;
+use ProductsControl\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class PasswordController extends Controller

@@ -39,8 +39,8 @@
         <div class="col-xs-12">
             <div class="box box-primary">
                 <div class="box-header">
-                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                    <h3 class="box-title">Cadastro de Ações</h3>
+                    <i class="fa fa-plug" aria-hidden="true"></i>
+                    <h3 class="box-title">Criação de Ordem de Compra</h3>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
@@ -59,29 +59,29 @@
                         </div>
                     @endif
 
-                    <a href="{{ Route('superuser.action_code.create') }}" class="btn btn-primary" role="button">Adicionar Ação</a>
+                    <a href="{{ Route('order.create') }}" class="btn btn-primary" role="button">Adicionar Ordem</a>
                     <br>
                     <br>
                     <table id="example2" class="table table-bordered table-hover">
                         <thead>
                         <tr>
-                            <th>Índice</th>
-                            <th>Descrição</th>
-                            <th>Font Awesome</th>
-                            <th>Label do Status</th>
-                            <th>Atualizado Por</th>
+                            <th>Status</th>
+                            <th>Número da Ordem</th>
+                            <th>Cliente</th>
+                            <th>Data de Entrega</th>
+                            <th>Quantidade de Itens</th>
                             <th>Ação</th>
                         </tr>
                         </thead>
                         <tbody>
 
-                        @forelse($action_codes as $action_code)
+                        @forelse($orders as $order)
                             <tr>
-                                <td><a href="#">{{ $action_code->id}}</a></td>
-                                <td>{{ $action_code->description}}</td>
-                                <td>{!! $action_code->font_awesome_description !!} </td>
-                                <td>{!! $action_code->status_label !!} </td>
-                                <td>{{ $action_code->user_updated->name}}</td>
+                                <td><a href="#">{{ $order->getStatus()}}</a></td>
+                                <td># {{ $order->id }}</td>
+                                <td>{{ $order->client_name }}</td>
+                                <td>{{ $order->shipment_date }}</td>
+                                <td> - </td>
 
                                 <td>
                                     <div class="btn-group">
@@ -91,8 +91,9 @@
                                             <span class="sr-only">Toggle Dropdown</span>
                                         </button>
                                         <ul class="dropdown-menu" role="menu">
-                                            <li><a href="{{ Route('superuser.action_code.edit', $action_code->id) }}">Editar</a></li>
-                                            <li><a onclick="show_modal('{{ Route('superuser.action_code.destroy', $action_code->id) }}', '{{ $action_code->description }}')" data-toggle="modal" data-target="#myModal" href="#">Excluir</a></li>
+                                            <li><a href="{{ Route('order.edit', $order->id) }}">Editar</a></li>
+                                            <li><a onclick="show_modal('{{ Route('order.destroy', $order->id) }}', '{{ $order->name }}')" data-toggle="modal" data-target="#myModal" href="#">Excluir</a></li>
+                                            <li><a href="#">Produtos</a></li>
                                         </ul>
                                     </div>
                                 </td>
@@ -111,17 +112,17 @@
                         </tbody>
                         <tfoot>
                         <tr>
-                            <th>Índice</th>
-                            <th>Descrição</th>
-                            <th>Font Awesome</th>
-                            <th>Label do Status</th>
-                            <th>Atualizado Por</th>
+                            <th>Status</th>
+                            <th>Número da Ordem</th>
+                            <th>Cliente</th>
+                            <th>Data de Entrega</th>
+                            <th>Quantidade de Itens</th>
                             <th>Ação</th>
                         </tr>
                         </tfoot>
                     </table>
 
-                    {!! $action_codes->render() !!}
+                    {!! $orders->render() !!}
                 </div>
                 <!-- /.box-body -->
             </div>

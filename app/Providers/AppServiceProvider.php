@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectNpx\Providers;
+namespace ProductsControl\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

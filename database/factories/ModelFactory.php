@@ -11,7 +11,7 @@
 |
 */
 
-$factory->define(ProjectNpx\User::class, function (Faker\Generator $faker) {
+$factory->define(ProductsControl\User::class, function (Faker\Generator $faker) {
     return [
         'name' => $faker->name,
         'email' => $faker->safeEmail,
@@ -20,15 +20,7 @@ $factory->define(ProjectNpx\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(ProjectNpx\ActionCode::class, function (Faker\Generator $faker) {
-    return [
-        'description' => $faker->name,
-        'font_awesome_description' => '<i class="fa fa-cloud-upload" aria-hidden="true"></i>',
-        'created_by' => 1
-    ];
-});
-
-$factory->define(ProjectNpx\Menu::class, function (Faker\Generator $faker) {
+$factory->define(ProductsControl\Menu::class, function (Faker\Generator $faker) {
     return [
         'route_description' => 'documents.upload_documents',
         'font_awesome_description' => '<i class="fa fa-share-alt" aria-hidden="true"></i>',

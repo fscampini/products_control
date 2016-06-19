@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectNpx;
+namespace ProductsControl;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -29,16 +29,16 @@ class User extends Authenticatable
     ];
 
     public function documents(){
-        return $this->hasMany('ProjectNpx\Document');
+        return $this->hasMany('ProductsControl\Document');
     }
     
     public function documentsHistories()
     {
-        return $this->hasMany('ProjectNpx\DocumentHistory');
+        return $this->hasMany('ProductsControl\DocumentHistory');
     }
 
     public function menus()
     {
-        return $this->belongsToMany('ProjectNpx\Menu')->where('parent_menu_id', '=', null);
+        return $this->belongsToMany('ProductsControl\Menu')->where('parent_menu_id', '=', null);
     }
 }

@@ -1,6 +1,6 @@
-<?php namespace ProjectNpx\Http\Controllers;
+<?php namespace ProductsControl\Http\Controllers;
 
-use ProjectNpx\Http\Requests;
+use ProductsControl\Http\Requests;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;

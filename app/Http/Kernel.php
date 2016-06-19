@@ -1,9 +1,9 @@
 <?php
 
-namespace ProjectNpx\Http;
+namespace ProductsControl\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
-use ProjectNpx\Http\Middleware\VerifyAdmin;
+use ProductsControl\Http\Middleware\VerifyAdmin;
 
 class Kernel extends HttpKernel
 {
@@ -25,11 +25,11 @@ class Kernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \ProjectNpx\Http\Middleware\EncryptCookies::class,
+            \ProductsControl\Http\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \ProjectNpx\Http\Middleware\VerifyCsrfToken::class,
+            \ProductsControl\Http\Middleware\VerifyCsrfToken::class,
         ],
 
         'api' => [
@@ -45,12 +45,12 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \ProjectNpx\Http\Middleware\Authenticate::class,
+        'auth' => \ProductsControl\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
-        'guest' => \ProjectNpx\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \ProductsControl\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'admin' => \ProjectNpx\Http\Middleware\VerifyAdmin::class,
-        'superuser' => \ProjectNpx\Http\Middleware\VerifySuperUser::class
+        'admin' => \ProductsControl\Http\Middleware\VerifyAdmin::class,
+        'superuser' => \ProductsControl\Http\Middleware\VerifySuperUser::class
     ];
 }

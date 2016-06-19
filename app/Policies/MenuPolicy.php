@@ -1,10 +1,10 @@
 <?php
 
-namespace ProjectNpx\Policies;
+namespace ProductsControl\Policies;
 
 use Illuminate\Auth\Access\HandlesAuthorization;
-use ProjectNpx\Menu;
-use ProjectNpx\User;
+use ProductsControl\Menu;
+use ProductsControl\User;
 
 
 class MenuPolicy

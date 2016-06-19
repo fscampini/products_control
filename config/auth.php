@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => ProjectNpx\User::class,
+            'model' => ProductsControl\User::class,
         ],
 
         // 'users' => [

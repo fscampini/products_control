@@ -1,14 +1,14 @@
 <?php
 
-namespace ProjectNpx\Http\Controllers;
+namespace ProductsControl\Http\Controllers;
 
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
-use ProjectNpx\Http\Requests;
-use ProjectNpx\Role;
+use ProductsControl\Http\Requests;
+use ProductsControl\Role;
 
 class RoleController extends Controller
 {

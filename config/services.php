@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => ProjectNpx\User::class,
+        'model' => ProductsControl\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

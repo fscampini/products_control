@@ -4,10 +4,10 @@
 
     <!-- SELECT2 EXAMPLE -->
     <div class="box box-primary">
-        {!! Form::model($action_code, ['route'=> ['superuser.action_code.update', $action_code->id], 'method'=>'put']) !!}
+        {!! Form::open(['route'=>'admin.product.store', 'method'=>'post']) !!}
             <div class="box-header with-border">
-                <i class="fa fa-plug" aria-hidden="true"></i>
-                <h3 class="box-title">Editar Menu</h3>
+                <i class="fa fa-gift" aria-hidden="true"></i>
+                <h3 class="box-title">Criar Produto</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -27,15 +27,15 @@
                         </div>
                     @endif
 
-                    @include('action_code._form')
+                    @include('product._form')
 
                 </div>
                 <!-- /.row -->
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
-                <a href="{{ Route('superuser.action_code.index') }}" class="btn btn-primary" role="button">Retornar</a>
-                {!! Form::submit('Atualizar Menu', ['class'=> 'btn btn-primary']) !!}
+                <a href="{{ Route('admin.category.index') }}" class="btn btn-primary" role="button">Retornar</a>
+                {!! Form::submit('Adicionar Produto', ['class'=> 'btn btn-primary']) !!}
             </div>
         {!! Form::close() !!}
     </div>
@@ -50,22 +50,7 @@
             $( ".inner" ).empty();
             $( ".inner" ).append(content);
         });
-
-        $( ".target-label" ).change(function() {
-            var content = $( ".target-label" ).val()
-            $( ".inner-label" ).empty();
-            $( ".inner-label" ).append(content);
-        });
-
-        $( document ).ready(function() {
-            var content = $( ".target" ).val()
-            $( ".inner" ).empty();
-            $( ".inner" ).append(content);
-
-            var content2 = $( ".target-label" ).val()
-            $( ".inner-label" ).empty();
-            $( ".inner-label" ).append(content2);
-        });
-
     </script>
+
+
 @endsection

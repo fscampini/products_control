@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateDocumentHistoriesTable extends Migration
+class CreateCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,14 @@ class CreateDocumentHistoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('document_histories', function (Blueprint $table) {
+        Schema::create('categories', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name',80)->unique();
+            $table->text('description')->nullable();
             $table->integer('created_by');
             $table->foreign('created_by')->references('id')->on('users');
-            $table->integer('document_id');
-            $table->foreign('document_id')->references('id')->on('documents');
+            $table->integer('last_updated_by');
+            $table->foreign('last_updated_by')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateDocumentHistoriesTable extends Migration
      */
     public function down()
     {
-        Schema::drop('document_histories');
+        Schema::drop('categories');
     }
 }

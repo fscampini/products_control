@@ -1,10 +1,10 @@
 <?php
 
-namespace ProjectNpx\Http\Controllers\Auth;
+namespace ProductsControl\Http\Controllers\Auth;
 
-use ProjectNpx\User;
+use ProductsControl\User;
 use Validator;
-use ProjectNpx\Http\Controllers\Controller;
+use ProductsControl\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 

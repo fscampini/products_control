@@ -4,10 +4,10 @@
 
     <!-- SELECT2 EXAMPLE -->
     <div class="box box-primary">
-        {!! Form::open(['route'=>'superuser.action_code.store', 'method'=>'post']) !!}
+        {!! Form::open(['route'=>'admin.category.store', 'method'=>'post']) !!}
             <div class="box-header with-border">
-                <i class="fa fa-check-square-o" aria-hidden="true"></i>
-                <h3 class="box-title">Cadastro de Ação</h3>
+                <i class="fa fa-eye" aria-hidden="true"></i>
+                <h3 class="box-title">Criar Categoria</h3>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
@@ -27,15 +27,15 @@
                         </div>
                     @endif
 
-                    @include('action_code._form')
+                    @include('category._form')
 
                 </div>
                 <!-- /.row -->
             </div>
             <!-- /.box-body -->
             <div class="box-footer">
-                <a href="{{ Route('superuser.action_code.index') }}" class="btn btn-primary" role="button">Retornar</a>
-                {!! Form::submit('Adicionar Ação', ['class'=> 'btn btn-primary']) !!}
+                <a href="{{ Route('admin.category.index') }}" class="btn btn-primary" role="button">Retornar</a>
+                    {!! Form::submit('Adicionar Categoria', ['class'=> 'btn btn-primary']) !!}
             </div>
         {!! Form::close() !!}
     </div>
@@ -49,12 +49,6 @@
             var content = $( ".target" ).val()
             $( ".inner" ).empty();
             $( ".inner" ).append(content);
-        });
-
-        $( ".target-label" ).change(function() {
-            var content = $( ".target-label" ).val()
-            $( ".inner-label" ).empty();
-            $( ".inner-label" ).append(content);
         });
     </script>
 

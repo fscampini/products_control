@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectNpx;
+namespace ProductsControl;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,29 +16,29 @@ class Menu extends Model
     ];
 
     public function user_created(){
-        return $this->belongsTo('ProjectNpx\User', 'created_by');
+        return $this->belongsTo('ProductsControl\User', 'created_by');
     }
 
     public function user_updated(){
-        return $this->belongsTo('ProjectNpx\User', 'last_updated_by');
+        return $this->belongsTo('ProductsControl\User', 'last_updated_by');
     }
 
     public function documentHistory(){
-        return $this->hasMany('ProjectNpx\DocumentHistory');
+        return $this->hasMany('ProductsControl\DocumentHistory');
     }
 
     public function users()
     {
-        return $this->belongsToMany('ProjectNpx\User');
+        return $this->belongsToMany('ProductsControl\User');
     }
 
     public function child_menus()
     {
-        return $this->hasMany('ProjectNpx\Menu', 'parent_menu_id', 'id');
+        return $this->hasMany('ProductsControl\Menu', 'parent_menu_id', 'id');
     }
 
     public function parent_menu()
     {
-        return $this->belongsTo('ProjectNpx\Menu', 'parent_menu_id');
+        return $this->belongsTo('ProductsControl\Menu', 'parent_menu_id');
     }
 }

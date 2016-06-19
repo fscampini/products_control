@@ -1,12 +1,12 @@
 <?php
 
-namespace ProjectNpx\Http\Controllers;
+namespace ProductsControl\Http\Controllers;
 
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Route;
-use ProjectNpx\Menu;
-use ProjectNpx\User;
+use ProductsControl\Menu;
+use ProductsControl\User;
 
 class AccessControlController extends Controller
 {

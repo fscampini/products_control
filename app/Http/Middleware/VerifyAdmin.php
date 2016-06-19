@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectNpx\Http\Middleware;
+namespace ProductsControl\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;

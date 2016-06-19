@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use ProjectNpx\User;
+use ProductsControl\User;
 
 class UserTableSeeder extends Seeder
 {
@@ -14,7 +14,7 @@ class UserTableSeeder extends Seeder
     {
         DB::table('users')->truncate();
 
-        factory('ProjectNpx\User')->create(
+        factory('ProductsControl\User')->create(
             [
                 'name'=> 'Felipe Scampini da Silva',
                 'email' => 'fscampini@gmail.com',
@@ -24,7 +24,7 @@ class UserTableSeeder extends Seeder
             ]
         );
 
-        factory('ProjectNpx\User', 10)->create();
+        factory('ProductsControl\User', 10)->create();
 
         // Atribuindo o menu ao usuário Felipe Scampini
         $user = User::find(1);

@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectNpx\Providers;
+namespace ProductsControl\Providers;
 
 use Illuminate\Contracts\Events\Dispatcher as DispatcherContract;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'ProjectNpx\Events\SomeEvent' => [
-            'ProjectNpx\Listeners\EventListener',
+        'ProductsControl\Events\SomeEvent' => [
+            'ProductsControl\Listeners\EventListener',
         ],
     ];
 

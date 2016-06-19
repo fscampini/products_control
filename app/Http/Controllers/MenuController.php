@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectNpx\Http\Controllers;
+namespace ProductsControl\Http\Controllers;
 
 use Illuminate\Http\Request;
 
@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
-use ProjectNpx\Menu;
-use ProjectNpx\Http\Requests;
+use ProductsControl\Menu;
+use ProductsControl\Http\Requests;
 
 class MenuController extends Controller
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectNpx\Jobs;
+namespace ProductsControl\Jobs;
 
 use Illuminate\Bus\Queueable;
 

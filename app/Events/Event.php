@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjectNpx\Events;
+namespace ProductsControl\Events;
 
 abstract class Event
 {
